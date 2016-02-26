@@ -35,8 +35,6 @@
 		                        <td><input type="text" name="daerah" class="form-control" value="<?php echo (isset($_GET['daerah'])) ? $_GET['daerah'] : '' ;?>"></td>
 		                        <td><input type="text" name="hp" class="form-control" value="<?php echo (isset($_GET['hp'])) ? $_GET['hp'] : '' ;?>"></td>
 		                        <td><input type="text" name="telepon" class="form-control" value="<?php (isset($_GET['telepon'])) ? $_GET['telepon'] : '' ;?>"></td>
-		                        <td><input type="text" name="fax" class="form-control" value="<?php echo (isset($_GET['fax'])) ? $_GET['fax'] : '' ;?>"></td>
-		                        <td><input type="text" name="alamat" class="form-control" value="<?php echo (isset($_GET['alamat'])) ? $_GET['alamat'] : '' ;?>"></td>
 		                        <td><button type="submit" class="btn btn-info">Filter</button></td>
 		                        </form>
                         	</tr>
@@ -49,8 +47,6 @@
 		                        <th>Daerah</th>
 		                        <th>Hp</th>
 		                        <th>Telepon</th>
-		                        <th>Fax</th>
-		                        <th>Alamat</th>
 		                        <th style="width: 100px"></th>
                         	</tr>
                         	<?php foreach ($peserta as $key => $value): ?>
@@ -63,10 +59,8 @@
 		                        <td><?php echo $value['daerah'];?></td>
 		                        <td><?php echo $value['hp'];?></td>
 		                        <td><?php echo $value['telepon'];?></td>
-		                        <td><?php echo $value['fax'];?></td>
-		                        <td><?php echo $value['alamat'];?></td>
 		                        <td>
-		                        	<a data-toggle="modal" onclick="clickEditPic(<?php echo $value['id_peserta'];?>,'<?php echo $value['nip'];?>','<?php echo $value['nama'];?>');" data-target="#imageModal"><button class="btn btn-default btn-xs"><i class="glyphicon glyphicon-picture"></i></button></a>
+		                        	<a data-toggle="modal" onclick="clickEditPic(<?php echo $value['id_peserta'];?>,'<?php echo $value['nip'];?>','<?php echo $value['nama'];?>','<?php echo $value['img'];?>');" data-target="#imageModal"><button class="btn btn-default btn-xs"><i class="glyphicon glyphicon-picture"></i></button></a>
 			                        <a data-toggle="modal" onclick="clickEditPeserta(<?php echo $value['id_peserta'];?>, '<?php echo $value['nip'];?>', '<?php echo $value['nama'];?>', '<?php echo $value['email'];?>', '<?php echo $value['instansi'];?>', '<?php echo $value['daerah'];?>', '<?php echo $value['hp'];?>', '<?php echo $value['fax'];?>', '<?php echo $value['telepon'];?>', '<?php echo $value['alamat'];?>');" data-target="#editModal"><button class="btn btn-default btn-xs"><i class="glyphicon glyphicon-edit"></i></button></a>
 			                        <a data-toggle="modal" onclick="clickHapus(<?php echo $value['id_peserta'];?>,'<?php echo $value['nip'];?>');" data-target="#hapusModal"><button class="btn btn-default btn-xs"><i class="glyphicon glyphicon-trash"></i></button></a>
 			                    </td>
@@ -224,13 +218,13 @@
 <script type="text/javascript">
 
 
-    function clickEditPic(id_peserta,nip,nama) {
+    function clickEditPic(id_peserta,nip,nama, img) {
 
         var img_src=document.getElementById('img_peserta');
         var formuoloadimage=document.getElementById('formuoloadimage');
         var picNIP=document.getElementById('picNIP');
         var picNama=document.getElementById('picNama');
-        img_src.src="<?php echo base_url();?>"+"upload/peserta/peserta_"+id_peserta+".jpg";
+        img_src.src="<?php echo base_url();?>"+"upload/peserta/"+img;
         picNama.innerHTML=": "+nama;
         picNIP.innerHTML=": "+nip;
         formuoloadimage.action="<?php echo site_url();?>"+"/admin/uploadPic/"+id_peserta;

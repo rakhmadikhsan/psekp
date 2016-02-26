@@ -1,0 +1,81 @@
+/* element*/
+*{margin: 0px;padding: 0px;	}
+body {position: relative; margin: 0px; padding: 0px;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;font-size: 13px;	color: #000;}
+html, body {height: 100%; }
+
+h1,h2, h3, h4, h5, h6{text-align: left;}
+h1 {font-size:200%;}
+h2 {font-size:180%;}
+h3 {font-size:150%;}
+h4 {font-size:120%;}
+h5 {font-size:110%;}
+h6 {font-size:100%;}
+
+a, a:hover, a:active, a:visited, a:link {
+    color: #e43727;
+    text-decoration: none; border: none;cursor: pointer;
+    transition: background-color 0.3s ease-in 0s, color 0.3s ease-in 0s;
+}
+.clear{clear: both;}
+.wrapper760{width: 760px;}
+.center{margin: 0px auto;}
+.w1000{width: 1000px;}
+.w100p{width:100%;}.w240{width: 240px;}
+
+
+.h5{height: 5px;}.h10{height: 10px;}.h20{height: 20px;}.h50{height: 50px;}
+.h200{height: 200px;}
+
+
+.index0{z-index: 0;}.index2{z-index: 2;}.index3{z-index: 3;}.index4{z-index: 4;}.index5{z-index: 5;}
+.index6{z-index: 6;}.index7{z-index: 7;}.index8{z-index: 8;}.index9{z-index: 9;}.index10{z-index: 10;}
+
+.L{float : left;}
+.R{float : right;}
+
+.rel{position: relative;}
+
+.bg1{background-color: #22344e;}
+
+.font-18{font-size: 18px; color: white; font-weight: bold;}
+.bluetxt{color: #3366cc;}
+.redtxt{color: #c1392d}
+.greytxt{color: #555;}
+.bluedark{color: #22344e;}
+
+
+hr.white2px{border: none; border-bottom: 2px solid white; margin: 10px 0px;}
+.clear{clear: both;}
+.bg2{background-color: #cce0fb;}
+.bg3{background-color: #ededed;}
+
+.rounded{
+-moz-border-radius: 0px 0px 6px 6px;
+-webkit-border-radius:  0px 0px 6px 6px;
+border-radius: 0px 0px 6px 6px; /* future proofing */
+-khtml-border-radius:  0px 0px 6px 6px; /* for old Konqueror browsers */
+
+/*-moz-border-radius-topleft: 0px;
+-moz-border-radius-topright: 0px;
+border-radius-left: 0px;
+-moz-border-radius-bottomright: 30px;
+-moz-border-radius-bottomleft: 0;*/
+
+/*-webkit-border-top-left-radius: 0px;
+-webkit-border-top-right-radius: 0px;
+-webkit-border-bottom-right-radius: 30px;
+-webkit-border-bottom-left-radius: 0;*/
+
+}
+
+
+.marginL3{margin-left: 3px;}
+.marginL2{margin-left: 2px;}
+.marginL1{margin-left: 1px;}
+.marginR3{margin-right: 3px;}
+.marginT3{margin-top: 3px;}
+.marginT4{margin-top: 4px;}
+.marginT5{margin-top: 5px;}
+
+.noline{border: 0px !important;}

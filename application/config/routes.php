@@ -52,3 +52,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'main';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+// $route['post/(:any)'] = 'main/post/$1';
+// $route['berita'] = 'main/berita';
+// $route['berita/(:any)'] = 'main/berita/$1';
+// $route['pengumuman'] = 'main/pengumuman';
+// $route['pengumuman/(:any)'] = 'main/pengumuman/$1';
+// $route['agenda'] = 'main/agenda';
+// $route['agenda/(:any)'] = 'main/agenda/$1';
+$route['id'] = 'main';
+$route['id/(:any)'] = 'main/$1';
+$route['en'] = 'main_en';
+$route['en/(:any)'] = 'main_en/$1';
+

@@ -54,6 +54,8 @@ class VerifyLoginPeserta extends CI_Controller {
    else
    {
      $this->form_validation->set_message('check_database', 'Invalid NIP');
+     // $this->session->set_flashdata('error',"NIP yang anda masukkan salah atau belum terdaftar.");
+     // redirect("main");
      return false;
    }
  }

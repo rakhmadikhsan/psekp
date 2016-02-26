@@ -42,6 +42,7 @@
         <?php endif ?>
         <?php echo validation_errors(); ?>
         <form method="post" action="<?php echo site_url().'/verifyloginpeserta' ?>" role="login">
+          Login Peserta
           <input type="username" name="nip" id="nip" placeholder="NIP" required class="form-control input-lg" />
           
          

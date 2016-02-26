@@ -39,7 +39,8 @@ class Register extends CI_Controller {
 		{
 
 			//print_r($_POST);
-			if($this->peserta->register($_POST))
+			$data_reg=$this->m_peserta->register($_POST);
+			if($data_reg)
 			{
 				$this->session->set_flashdata('msg',"Selamat anda telah berhasil mendaftar sebagai peserta PSEKM. Gunakan NIP anda untuk melakukan login.");
 				redirect("loginpeserta");

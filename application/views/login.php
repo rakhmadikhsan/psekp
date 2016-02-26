@@ -36,6 +36,7 @@
          
          <?php echo validation_errors(); ?>
         <form method="post" action="<?php echo site_url().'/verifylogin' ?>" role="login">
+          Login Admin
           <input type="username" name="username" id="password" placeholder="Username" required class="form-control input-lg" />
           
           <input type="password" class="form-control input-lg" name="password" id="password" placeholder="Password" required="" />
